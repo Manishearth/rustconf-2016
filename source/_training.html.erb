@@ -1,31 +1,19 @@
 <tr>
-  <% speakers = data.program.speakers.select {|spk| training.speakers.include? spk.ident} %>
   <td>
-  <% speakers.each do |speaker| %>
-    <% if speakers.length > 1 %>
-        <%= image_tag "speakers/#{speaker.image}", class: "spkPic_multiple" %>
-    <% else %>
-        <%= image_tag "speakers/#{speaker.image}", class: "spkPic2" %>
-    <% end %>
-  <% end %>
+    <%= image_tag "speakers/#{speaker.image}", class: "spkPic2"%>
   </td>
-  <td class="abstract" id="<%= training.slug %>">
+  <td class="abstract">
+    <% (speaker[:talks] || [speaker]).select { |t| t.title =~ /^Training/ }.each do |talk| %>
       <h4>
-        <a href="#<%= training.slug %>" class=plainlink><%= training.title %></a>
+        <%= talk.title %>
       </h4>
-      <h5><% if training.focus %> <%= training.focus %>, <% end %>By
-        <% speakers.each_with_index do |speaker, idx| %>
-          <% if idx != 0 %> , <% end %>
-          <% if speaker.twitter %>
-            <%= link_to speaker.name, "http://www.twitter.com/#{speaker.twitter}" %>
-          <% else %>
-            <%= link_to speaker.name, "http://github.com/#{speaker.github}" %>
-          <% end %>
-        <% end %>
+      <h5>
+        <%= talk.focus %>, By <%= link_to speaker.name, "http://www.twitter.com/#{speaker.twitter}" %>
       </h5>
       <p>
-        <%= training.abstract %>
+        <%= talk.abstract %>
       </p>
+    <% end %>
   </td>
 </tr>
 <tr>

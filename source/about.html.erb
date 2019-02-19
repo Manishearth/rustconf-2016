@@ -6,20 +6,22 @@ title: About RustConf
 
 	<h1>About RustConf</h1>
 
-	<p>RustConf will be a gathering of both Rust's established community and its newcomers. We're excited to all get to spend time together, deep-diving into all things Rust.</p>
+	<p>The first ever RustConf will be a gathering of both Rust's established community and its newcomers. We're excited to all get to spend time together, deep-diving into all things Rust.</p>
 
-	<h1>About The Organizers</h1>
+	<hr>
 
-	<h4>RustConf is organized by </h4>
-    <% data.program.orga.each do |member| %>
-        <a href="https://twitter.com/<%= member.twitter %>" style="display: inline-block; padding-bottom: 5px;"><figure><img src="images/speakers/<%= member.image %>" class="spkPic2" /> <figcaption><%= member.name%></figcaption></figure></a>
-    <% end %>
+	<h2>Organizers</h2>
 
-<br><br>
-	<h4>Our amazing program committee </h4>
-    <% data.program.pc.each do |member| %>
-        <a href="https://twitter.com/<%= member.twitter %>" style="display: inline-block; padding-bottom: 5px;"><figure><img src="images/speakers/<%= member.image %>" class="spkPic2" /> <figcaption><%= member.name%></figcaption></figure></a>
-    <% end %>
+	<div class="center">
+		<img class="spkHead" src="images/speakers/home-leah.jpg">
+		<!-- <img class="spkHead" src="/images/speakers/home-jamie.jpg"> -->
+		<img class="spkHead" src="images/speakers/home-crystal.jpg">
+	</div>
+
+	<p>Leah and Crystal are on the ground in Portland. They'll both be on-site at RustConf; do say hullo, and reach out to them in advance of or during the show if you need anything!</p>
+
+	<hr>
+
 	<h2 id="conduct">Code of Conduct</h2>
 
 	<div class="coc">
@@ -40,18 +42,29 @@ title: About RustConf
 		</p>
 	</div>
 
-  <h3>FAQs</h3>
+<!--
+	<hr>
 
-  <div class="coc">
-    <ul>
-      <% data.faq.each do |question| %>
-      <li class="question">
-        <%= question.q %>
-      </li>
-      <li class="answer">
-        <%= question.a %>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+	<h2>Staying in Portland</h2>
+
+	<p>
+		For ground transportation, in addition to hailing cabs, Uber is a great option. <a href="https://www.uber.com/invite/uberTechConf">Use this link</a> or promo code ​<em>uberTechConf​</em> to save up to $20 off your first ride.
+	</p>
+
+	<p>
+		There's no reserved hotel block for RustConf, but there are a number of both affordable and pricey hotels nearby (including The Nines), and <a href="www.airbnb.com/c/lsilber1?s=8">AirBnb</a> is a great option too. Some of the hotels we've been recommended:
+	</p>
+
+	<h4 class="hname"><a href="http://www.thenines.com/">The Nines Hotel</a> ($$)</h4>
+
+	<img class="hotel" src="/images/hotels/hotel-nines.jpg">
+
+	<p class="hp">The Nines Hotel is upscale Portland trendy. It doesn't get more convnient than being an elevator ride away from the conference, so if it's in your budget, we recommend it. You can use <strong>this discount code</strong> for 15% off. It's centrally located, within walking distance of numerous food carts and restaurants.</p>
+
+	<h4 class="hname"><a href="http://www.portlandparamount.com/">Paramount Hotel</a> ($)</h4>
+
+	<img class="hotel" src="/images/hotels/hotel-paramount.jpg">
+
+	<p class="hp">The Paramount Hotel is a short walk from The Nines and a similarly cozy boutique-style hotel. Like The Nines it has some great restaurants on-site, and is conveniently located to both the conference and downtown attractions.</p>
+-->
 </div>
